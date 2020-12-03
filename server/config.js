@@ -1,6 +1,6 @@
 module.exports = {
     host : 'localhost',
     dbPort : '27017',
-    dbName : 'post-test',
+    dbName : 'test',
     serverPort : 3000
 }
