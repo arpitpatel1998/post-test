@@ -102,27 +102,5 @@ exports.homeScreenDataService = async () => {
 }
 
 
-exports.savePost = async (req,res) => {
-    req.body.post_timeStamp = new Date();
-    req.body.user_id = ObjectId(req.body.user_id);
-    const save = new postModel.modal(req.body);
-    await save.save();
-}
-
-exports.saveUser = async (req,res) => {
-    req.body.createdAt = new Date();
-    req.body.updatedAt = new Date();
-    const save = new userModel.modal(req.body);
-    console.log(await save.save());
-}
-
-exports.saveComment = async (req,res) => {
-    req.body.user_id = ObjectId(req.body.user_id);
-    req.body.post_id = ObjectId(req.body.post_id);
-   
-    req.body.comment_timeStamp = new Date();
-    const save = new commentModel.modal(req.body);
-    console.log(await save.save());
-}
 
 
